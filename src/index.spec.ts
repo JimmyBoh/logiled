@@ -10,6 +10,7 @@ const LOGI_LOGO = [
   logiled.KeyName.G_BADGE,
 ];
 
+
 const LOGI_WSAD = [
   logiled.KeyName.W,
   logiled.KeyName.S,
@@ -455,7 +456,7 @@ describe('logiled', function() {
     });
   });
 
-  describe('RGB', function() {
+  describe.only('RGB', function() {
 
     before('setup sdk', function(done) {
       logiled.init();
@@ -491,22 +492,22 @@ describe('logiled', function() {
       setTimeout(done, 5000);
     });
 
-    // it('should set mouse zone colors (orange and purple)', function (done) {
-    //   this.slow(6000);
-    //   this.timeout(10000);
+    it('should set mouse zone colors (orange and purple)', function (done) {
+      this.slow(6000);
+      this.timeout(10000);
 
-    //   var result = logiled.setLightingForTargetZone({
-    //     deviceType: logiled.DeviceType.Mouse,
-    //     zone: 1,
-    //     redPercentage:   0,
-    //     greenPercentage: 0,
-    //     bluePercentage:  100
-    //   });
-    //   assert.equal(typeof result, 'boolean');
-    //   assert.equal(result, true);
+      var result = logiled.setLightingForTargetZone({
+        deviceType: logiled.DeviceType.Mouse,
+        zone: 1,
+        redPercentage:   0,
+        greenPercentage: 0,
+        bluePercentage:  100
+      });
+      assert.equal(typeof result, 'boolean');
+      assert.equal(result, true);
 
-    //   setTimeout(done, 5000);
-    // });
+      setTimeout(done, 5000);
+    });
 
     it('should blink device (red)', function (done) {
       this.slow(6000);

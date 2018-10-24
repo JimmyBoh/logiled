@@ -92,6 +92,10 @@ export interface PulseKeySetting {
     isInfinite: boolean;
 }
 
+export interface ZoneSetting {
+    zone: number;
+}
+
 export interface LogiLed {
 
     /**
@@ -153,6 +157,9 @@ export interface LogiLed {
      * For devices that only support a single color, the highest percentage value given of the three colors will define the intensity. For monochrome backlighting device, Logitech Gaming Softwarewill reduce proportionally the value of the highest color, according to the user hardware brightness setting.
      */
     setLighting(options: ColorSetting): boolean;
+
+
+    setLightingForTargetZone(options: DeviceTypeSetting & ZoneSetting & ColorSetting): boolean;
 
     /**
      * Restores the last saved lighting. It should be called after a temporary effect is finished.

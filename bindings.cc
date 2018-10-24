@@ -27,6 +27,8 @@ NAN_MODULE_INIT(InitAll) {
     Nan::GetFunction(Nan::New<FunctionTemplate>(SaveCurrentLighting)).ToLocalChecked());
   Nan::Set(target, Nan::New("setLighting").ToLocalChecked(),
     Nan::GetFunction(Nan::New<FunctionTemplate>(SetLighting)).ToLocalChecked());
+  Nan::Set(target, Nan::New("setLightingForTargetZone").ToLocalChecked(),
+    Nan::GetFunction(Nan::New<FunctionTemplate>(SetLightingForTargetZone)).ToLocalChecked());
   Nan::Set(target, Nan::New("restoreLighting").ToLocalChecked(),
     Nan::GetFunction(Nan::New<FunctionTemplate>(RestoreLighting)).ToLocalChecked());
   Nan::Set(target, Nan::New("flashLighting").ToLocalChecked(),

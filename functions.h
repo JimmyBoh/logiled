@@ -15,6 +15,7 @@ NAN_METHOD(SetConfigOptionLabel);
 NAN_METHOD(SetTargetDevice);
 NAN_METHOD(SaveCurrentLighting);
 NAN_METHOD(SetLighting);
+NAN_METHOD(SetLightingForTargetZone);
 NAN_METHOD(RestoreLighting);
 NAN_METHOD(FlashLighting);
 NAN_METHOD(PulseLighting);

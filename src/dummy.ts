@@ -22,6 +22,7 @@ export const dummy: LogiLed = {
     setTargetDevice: dummyBooleanSdkFunction,
     saveCurrentLighting: dummyBooleanSdkFunction,
     setLighting: dummyBooleanSdkFunction,
+    setLightingForTargetZone: dummyBooleanSdkFunction,
     restoreLighting: dummyBooleanSdkFunction,
     flashLighting: dummyBooleanSdkFunction,
     pulseLighting: dummyBooleanSdkFunction,
